@@ -1,0 +1,10 @@
+  <td>
+    <a ui-sref="show({id:itemCtrl.expense._id})">
+      {{itemCtrl.expense.description}}
+    </a>
+  </td>
+  <td>
+    {{itemCtrl.expense.amount}}
+  </td>
+  <td><span ng-bind="itemCtrl.expense.dueDate | date : 'dd.MM.yyyy'"></td>
+  <td><span ng-bind="itemCtrl.expense.createdAt | date : 'dd.MM.yyyy'"></span></td>

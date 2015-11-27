@@ -1,0 +1,22 @@
+{
+  "name": "tfinance",
+  "version": "1.0.0",
+  "description": "Application to keep track of ones finances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tomi Harju",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "moment": "^2.10.6",
+    "mongoose": "^4.2.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "webpack": "^1.12.6"
+  }
+}

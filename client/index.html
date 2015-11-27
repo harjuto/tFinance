@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="tFinance" ng-strict-di>
+<head>
+	<title>tFinance</title>
+  <link rel='stylesheet' href="app.min.css">
+  <link rel='stylesheet' href="vendor.min.css">
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li>
+					<a ui-sref="index">Dashboard</a>
+				</li>
+				<li>
+					<a ui-sref="create">Add expense</a>
+				</li>
+			</ul>
+	</nav>
+		<div class="container">
+	  	<div ui-view></div>
+		</div>
+	</div>
+	<script src="app.min.js"></script>
+</body>
+</html>

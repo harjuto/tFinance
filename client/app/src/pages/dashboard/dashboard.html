@@ -1,0 +1,21 @@
+<div class="row" id="dashboard">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          Description
+        </th>
+        <th>
+          Amount
+        </th>
+        <th>
+          Due date
+        </th>
+        <th>
+          Created
+        </th>
+      </tr>
+      <tr ng-repeat="expense in dashboard.expenses" expense="expense" expense-item ng-class="{'notified': expense.notified}"></tr>
+    </table>
+  </div>
+</div>
