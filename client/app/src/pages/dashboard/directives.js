@@ -6,8 +6,7 @@ var ExpenseItemDirective = function(){
     restrict: 'A',
     template: dashboardItem,
     replace: false,
-    controller: 'ExpenseItemCtrl',
-    controllerAs: 'itemCtrl',
+    controller: 'ExpenseItemCtrl as itemCtrl',
     scope:{
       expense: '='
     }
@@ -19,8 +18,7 @@ var DashboardContentDirective = function(){
     restrict:'E',
     template: DashboardTemplate,
     replace:false,
-    controller: 'DashboardCtrl',
-    controllerAs: 'dashboard',
+    controller: 'DashboardCtrl as dashboard',
     scope:{}
   }
 }

@@ -4,12 +4,12 @@ var app        = express();
 var config     = require('./config');
 var path       = require('path');
 var bodyParser = require('body-parser');
+
 var expenseCtrl = require('./controllers/expense');
 var scheduler = require('./src/scheduler');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/expenses/', expenseCtrl);
+
+app.get("/*", (req, res) => {
+  res.sendStatus(404)
+});
 
 //Connect to database
 mongoose.connect('mongodb://localhost/test');

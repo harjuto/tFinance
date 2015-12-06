@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema
 
 var ExpenseSchema = new Schema({
-  description:String,
+  description: String,
   amount: Number,
   dueDate: Date,
   useNotification: {type: Boolean, default: true},

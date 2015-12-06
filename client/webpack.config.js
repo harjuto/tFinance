@@ -14,6 +14,7 @@ module.exports = {
   },
   module: {
     loaders: [
+      //Transpile ES6
       {
         test: path.join(__dirname, 'app'),
         loader: 'babel-loader',
@@ -23,16 +24,22 @@ module.exports = {
           presets:['es2015']
         }
       },
+      //Compile css
       {
-        test: /\.css$/,
-        loader: "style-loader!css-loader",
-        exclude: /node_modules/,
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
       },
+      //Include angular templates
       {
          test: /\.html$/,
          loader: "ng-cache?prefix=[dir]/[dir]",
          exclude: /node_modules/,
-       }
+       },
+       //Include fonts
+       {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
+       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
+       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
 
     ]
   },

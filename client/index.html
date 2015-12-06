@@ -2,18 +2,24 @@
 <html ng-app="tFinance" ng-strict-di>
 <head>
 	<title>tFinance</title>
-  <link rel='stylesheet' href="app.min.css">
   <link rel='stylesheet' href="vendor.min.css">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script>
+		google.load('visualization', '1', {packages: ['corechart', 'line']});
+	</script>
 </head>
 <body>
 	<div class="container">
 		<nav class="navbar navbar-default">
 			<ul class="nav navbar-nav">
-				<li>
+				<li ui-sref-active="active">
 					<a ui-sref="index">Dashboard</a>
 				</li>
-				<li>
+				<li ui-sref-active="active">
 					<a ui-sref="create">Add expense</a>
+				</li>
+				<li ui-sref-active="active">
+					<a ui-sref="summary">Summary</a>
 				</li>
 			</ul>
 	</nav>

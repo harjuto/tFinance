@@ -19,9 +19,10 @@ class ExpenseShowCtrl{
   }
 }
 
+
 ExpenseShowCtrl.$inject = ['QueryService', '$stateParams', '$state'];
 
-class ExpenseCreateCtrl{
+class ExpenseCreateCtrl {
   constructor(QueryService, $state){
     this.$state = $state;
     this.QueryService = QueryService;

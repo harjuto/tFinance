@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var del = require('del');
 
-gulp.task('default',['cleanup','style'], function() {
+gulp.task('default',['cleanup', 'vendorStyle'], function() {
   return gulp.src('app/index.js')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('dist/'));

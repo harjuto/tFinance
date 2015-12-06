@@ -1,3 +1,4 @@
+
 class QueryService {
   constructor($http, $q){
     this.$http = $http;
@@ -15,6 +16,11 @@ class QueryService {
   }
   update(item){
     return this.$http.put('/api/expenses/' + item._id , item);
+  }
+  summary(start, end){
+    var start = start || 0;
+    var end = end || '';
+    return this.$http.get('/api/expenses/summary/'+start+'/'+end);
   }
 }
 

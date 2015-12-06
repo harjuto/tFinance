@@ -1,3 +1,4 @@
+//Use export class{}
 class DashboardCtrl {
   constructor(QueryService) {
       QueryService.list()
@@ -9,12 +10,11 @@ class DashboardCtrl {
 
 DashboardCtrl.$inject = ['QueryService'];
 
-
 class ExpenseItemCtrl {
   constructor($scope){
     this.expense = $scope.expense
   }
-  
+
 }
 ExpenseItemCtrl.$inject = ['$scope'];
 
